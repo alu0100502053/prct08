@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rake'
+gem 'rb-readline'
 gem 'rspec'
 gem 'guard'
 gem 'guard-rspec'
