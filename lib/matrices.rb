@@ -18,7 +18,15 @@ class Matriz
     		}
     	}
    end
-	
+
+   def -(other)  #Para la resta de matrices
+		matriz3 = Array.new(@dimension) {|i|   #creamos un array de arrays, de dimension @dimension, y cuya contenido en la posicion[i][j] será el resultado del bloque.
+    		Array.new(@dimension) {|j|
+      		@matriz[i][j] - other[i][j]
+    		}
+    	}
+   end
+
 	def [] (*ij)  #Recibe un numero de argumentos...
 		return @matriz[*ij] if ij.size == 1  #si el numero de argumentos es solo 1, entonces devolvemos toda la fila indicada.
 	   @matriz[ij.first][ij.last]  #si son 2, devuelveme el elemento indicado.
