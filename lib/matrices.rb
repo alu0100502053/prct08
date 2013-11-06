@@ -10,6 +10,14 @@ class Matriz
 		end
 		@dimension = args.size  #Guardamos en una variable de instancia la dimension de la matriz.
 	end
+
+	def +(other)  #Para la suma de matrices
+		matriz3 = Array.new(@dimension) {|i|   #creamos un array de arrays, de dimension @dimension, y cuya contenido en la posicion[i][j] será el resultado del bloque.
+    		Array.new(@dimension) {|j|
+      		@matriz[i][j] + other[i][j]
+    		}
+    	}
+   end
 	
 	def [] (*ij)  #Recibe un numero de argumentos...
 		return @matriz[*ij] if ij.size == 1  #si el numero de argumentos es solo 1, entonces devolvemos toda la fila indicada.

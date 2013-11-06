@@ -3,6 +3,7 @@ require 'matrices'
 describe Matriz do
 	before :each do
 		@matriz = Matriz.new([1,2,3],[4,5,6],[7,8,9])
+		@matriz2 = Matriz.new([3,2,1],[6,5,4],[9,8,7])
 	end
 	it "Debe comprobar que la matriz es cuadrada" do
 		expect { Matriz.new([2,3,3],[3,4],[1,2,3]) }.to raise_error
