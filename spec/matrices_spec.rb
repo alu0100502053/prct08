@@ -35,4 +35,17 @@ describe Matriz do
 		@matriz3[2][2].should eq(16)
 	end
 
+	it "Debe restar dos matrices" do
+		@matriz3 = @matriz-@matriz2
+		@matriz3[0][0].should eq(-2)
+		@matriz3[0][1].should eq(0)
+		@matriz3[0][2].should eq(2)
+		@matriz3[1][0].should eq(-2)
+		@matriz3[1][1].should eq(0)
+		@matriz3[1][2].should eq(2)
+		@matriz3[2][0].should eq(-2)
+		@matriz3[2][1].should eq(0)
+		@matriz3[2][2].should eq(2)
+	end
+
 end
