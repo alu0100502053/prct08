@@ -48,4 +48,17 @@ describe Matriz do
 		@matriz3[2][2].should eq(2)
 	end
 
+	it "Debe multiplicar dos matrices" do
+		@matriz3 = @matriz*@matriz2
+		@matriz3[0][0].should eq(42)
+		@matriz3[0][1].should eq(36)
+		@matriz3[0][2].should eq(30)
+		@matriz3[1][0].should eq(96)
+		@matriz3[1][1].should eq(81)
+		@matriz3[1][2].should eq(66)
+		@matriz3[2][0].should eq(150)
+		@matriz3[2][1].should eq(126)
+		@matriz3[2][2].should eq(102)
+	end
+
 end
