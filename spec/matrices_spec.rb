@@ -8,4 +8,17 @@ describe Matriz do
 		expect { Matriz.new([2,3,3],[3,4],[1,2,3]) }.to raise_error
 		expect { Matriz.new([2,3,3],[1,2,3]) }.to raise_error
 	end
+
+	it "Debe poder accederse a los elementos de la matriz" do
+		@matriz[0][0].should eq(1)
+		@matriz[0][1].should eq(2)
+		@matriz[0][2].should eq(3)
+		@matriz[1][0].should eq(4)
+		@matriz[1][1].should eq(5)
+		@matriz[1][2].should eq(6)
+		@matriz[2][0].should eq(7)
+		@matriz[2][1].should eq(8)
+		@matriz[2][2].should eq(9)
+	end
+
 end
